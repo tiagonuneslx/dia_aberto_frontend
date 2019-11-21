@@ -1,0 +1,11 @@
+query Activities {
+    activities: allActivities {
+        edges {
+            node {
+                name
+                submissionDate
+                submissionState
+            }
+        }
+    }
+}

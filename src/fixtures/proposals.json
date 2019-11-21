@@ -1,0 +1,57 @@
+[
+  {
+    "model": "activities.activity",
+    "pk": 1,
+    "fields": {
+      "name": "Introdução a Python",
+      "description": "Uma breve introdução à mais estudada linguagem sem curly bois",
+      "submission_date": "2018-04-28",
+      "submission_state": "P",
+      "creator": "Duarte Duarte"
+    }
+  },
+  {
+    "model": "activities.activity",
+    "pk": 2,
+    "fields": {
+      "name": "O primeiro Hello World",
+      "description": "Ninguém esquece o seu primeiro programa Hello World, por mais básico",
+      "submission_date": "2018-04-28",
+      "submission_state": "P",
+      "creator": "Marielba"
+    }
+  },
+  {
+    "model": "activities.activity",
+    "pk": 3,
+    "fields": {
+      "name": "Deixa-me rir",
+      "description": "Um traçado de comédia universitária com música Tunante",
+      "submission_date": "2018-04-28",
+      "submission_state": "P",
+      "creator": "Bastos"
+    }
+  },
+  {
+    "model": "activities.activity",
+    "pk": 4,
+    "fields": {
+      "name": "Observação microscópica de células",
+      "description": "Observação ao microscópico de células interessantíssimas",
+      "submission_date": "2018-04-28",
+      "submission_state": "A",
+      "creator": "José Valente Oliveira"
+    }
+  },
+  {
+    "model": "activities.activity",
+    "pk": 5,
+    "fields": {
+      "name": "Fomos longe demais?",
+      "description": "O perigoso avanço da inteligência artificial",
+      "submission_date": "2018-04-30",
+      "submission_state": "R",
+      "creator": "Mariebla"
+    }
+  }
+]

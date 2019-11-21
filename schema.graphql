@@ -1,0 +1,71 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+}
+
+"An object with an ID"
+interface Node {
+    "The ID of the object."
+    id: ID!
+}
+
+type ActivityNode implements Node {
+    description: String!
+    "The ID of the object."
+    id: ID!
+    name: String!
+    submissionDate: Date!
+    submissionState: ActivitySubmissionState!
+}
+
+type ActivityNodeConnection {
+    "Contains the nodes in this connection."
+    edges: [ActivityNodeEdge]!
+    "Pagination data for this connection."
+    pageInfo: PageInfo!
+}
+
+"A Relay edge containing a `ActivityNode` and its cursor."
+type ActivityNodeEdge {
+    "A cursor for use in pagination"
+    cursor: String!
+    "The item at the end of the edge"
+    node: ActivityNode
+}
+
+"The Relay compliant `PageInfo` type, containing data necessary to paginate this connection."
+type PageInfo {
+    "When paginating forwards, the cursor to continue."
+    endCursor: String
+    "When paginating forwards, are there more items?"
+    hasNextPage: Boolean!
+    "When paginating backwards, are there more items?"
+    hasPreviousPage: Boolean!
+    "When paginating backwards, the cursor to continue."
+    startCursor: String
+}
+
+type Query {
+    "The ID of the object"
+    activity(id: ID!): ActivityNode
+    allActivities(after: String, before: String, description: String, description_Icontains: String, first: Int, last: Int, name: String, name_Icontains: String, submissionState: String): ActivityNodeConnection
+}
+
+"An enumeration."
+enum ActivitySubmissionState {
+    #Aceite
+    A
+    #Pendente
+    P
+    #Rejeitado
+    R
+}
+
+
+"""
+The `Date` scalar type represents a Date
+value as specified by
+[iso8601](https://en.wikipedia.org/wiki/ISO_8601).
+"""
+scalar Date
