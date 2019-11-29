@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <NavBar />
+    <TopMenu />
     <div class="hero is-primary is-bold">
       <div class="hero-body" id="top-hero-body"></div>
     </div>
@@ -30,10 +31,12 @@
 
 <script>
 import NavBar from "./components/NavBar";
+import TopMenu from "./components/TopMenu";
 
 export default {
   components: {
-    NavBar
+    NavBar,
+    TopMenu
   }
 };
 </script>

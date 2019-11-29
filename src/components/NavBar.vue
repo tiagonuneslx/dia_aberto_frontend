@@ -22,52 +22,14 @@
         </h1>
       </b-navbar-item>
     </template>
-    <template slot="start">
-      <b-navbar-item :to="{ path: '/' }" class="router-link" tag="router-link">
-        Início
-      </b-navbar-item>
-      <b-navbar-item
-        :to="{ path: '/about' }"
-        class="router-link"
-        tag="router-link"
-      >
-        Contactos
-      </b-navbar-item>
-      <b-navbar-dropdown label="Páginas em construção">
-        <b-navbar-item
-          :to="{ path: '/activities' }"
-          class="router-link"
-          tag="router-link"
-        >
-          Atividades
-        </b-navbar-item>
-        <b-navbar-item
-          :to="{ path: '/admin' }"
-          class="router-link"
-          tag="router-link"
-        >
-          Admin
-        </b-navbar-item>
-        <b-navbar-item
-          :to="{ path: '/coordenador' }"
-          class="router-link"
-          tag="router-link"
-        >
-          Coordenador
-        </b-navbar-item>
-      </b-navbar-dropdown>
-    </template>
-
     <template slot="end">
+      <b-navbar-item tag="a">
+        <b-icon icon="bell" />
+      </b-navbar-item>
       <b-navbar-item tag="div">
-        <div class="buttons">
-          <a class="button is-primary">
-            <strong>Registar</strong>
-          </a>
-          <a class="button is-light">
-            Entrar
-          </a>
-        </div>
+        <b-button icon-left="login-variant">
+          Logout
+        </b-button>
       </b-navbar-item>
     </template>
   </b-navbar>
