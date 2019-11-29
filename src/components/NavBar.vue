@@ -2,21 +2,21 @@
   <b-navbar>
     <template slot="brand">
       <b-navbar-item
-              :to="{ path: '/' }"
-              class="logo router-link"
-              style="padding-left: 30px; padding-right: 20px"
-              tag="router-link"
+        :to="{ path: '/' }"
+        class="logo router-link"
+        style="padding-left: 30px; padding-right: 20px"
+        tag="router-link"
       >
-        <img alt="Logo" src="../assets/logo.png"/>
+        <img alt="Logo" src="../assets/logo.png" />
         <h1
-                class="has-text-dark"
-                style="padding-left: 6px; letter-spacing: -0.5px;"
+          class="has-text-dark"
+          style="padding-left: 6px; letter-spacing: -0.5px;"
         >
           <strong>UALG</strong>
         </h1>
         <h1
-                class="has-text-primary"
-                style="padding-left: 5px; letter-spacing: -0.5px;"
+          class="has-text-primary"
+          style="padding-left: 5px; letter-spacing: -0.5px;"
         >
           DIA ABERTO
         </h1>
@@ -27,31 +27,31 @@
         Início
       </b-navbar-item>
       <b-navbar-item
-              :to="{ path: '/about' }"
-              class="router-link"
-              tag="router-link"
+        :to="{ path: '/about' }"
+        class="router-link"
+        tag="router-link"
       >
         Contactos
       </b-navbar-item>
       <b-navbar-dropdown label="Páginas em construção">
         <b-navbar-item
-                :to="{ path: '/activities' }"
-                class="router-link"
-                tag="router-link"
+          :to="{ path: '/activities' }"
+          class="router-link"
+          tag="router-link"
         >
           Atividades
         </b-navbar-item>
         <b-navbar-item
-                :to="{ path: '/admin' }"
-                class="router-link"
-                tag="router-link"
+          :to="{ path: '/admin' }"
+          class="router-link"
+          tag="router-link"
         >
           Admin
         </b-navbar-item>
         <b-navbar-item
-                :to="{ path: '/coordenador' }"
-                class="router-link"
-                tag="router-link"
+          :to="{ path: '/coordenador' }"
+          class="router-link"
+          tag="router-link"
         >
           Coordenador
         </b-navbar-item>
@@ -74,19 +74,19 @@
 </template>
 
 <script>
-  export default {
-    name: "NavBar"
-  };
+export default {
+  name: "NavBar"
+};
 </script>
 
 <style lang="scss" scoped>
-  @import "../buefy";
+@import "../buefy";
 
-  .router-link:focus {
-    outline: none;
-  }
+.router-link:focus {
+  outline: none;
+}
 
-  .router-link.router-link-exact-active {
-    color: $primary;
-  }
+.router-link.router-link-exact-active {
+  color: $primary;
+}
 </style>

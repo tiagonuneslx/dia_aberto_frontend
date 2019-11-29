@@ -4,9 +4,28 @@
     "pk": 1,
     "fields": {
       "name": "Introdução a Python",
+      "activity_type": "Atividades Tecnológicas",
       "description": "Uma breve introdução à mais estudada linguagem sem curly bois",
       "submission_date": "2018-04-28",
-      "submission_state": "P"
+      "submission_state": "P",
+      "creator": "Duarte Duarte",
+      "campus": "Gambelas",
+      "organizational_entity": "FCT",
+      "department": "DEEI",
+      "sessions": [
+        {
+          "datetime": "2020-02-20T09:30:00.000Z",
+          "duration": 60,
+          "max_students": 25,
+          "collaborators_required": 1,
+          "collaborators_assigned": 0,
+          "place_specifications": [
+            "inside",
+            "computers"
+          ],
+          "place": null
+        }
+      ]
     }
   },
   {
@@ -14,9 +33,28 @@
     "pk": 2,
     "fields": {
       "name": "O primeiro Hello World",
+      "activity_type": "Atividades Tecnológicas",
       "description": "Ninguém esquece o seu primeiro programa Hello World, por mais básico",
       "submission_date": "2018-04-28",
-      "submission_state": "P"
+      "submission_state": "P",
+      "creator": "Marielba",
+      "campus": "Gambelas",
+      "organizational_entity": "FCT",
+      "department": "DEEI",
+      "sessions": [
+        {
+          "datetime": "2020-02-20T09:30:00.000Z",
+          "duration": 60,
+          "max_students": 25,
+          "collaborators_required": 1,
+          "collaborators_assigned": 0,
+          "place_specifications": [
+            "inside",
+            "computers"
+          ],
+          "place": null
+        }
+      ]
     }
   },
   {
@@ -24,9 +62,28 @@
     "pk": 3,
     "fields": {
       "name": "Deixa-me rir",
+      "activity_type": "Palestra",
       "description": "Um traçado de comédia universitária com música Tunante",
       "submission_date": "2018-04-28",
-      "submission_state": "P"
+      "submission_state": "P",
+      "creator": "Bastos",
+      "campus": "Gambelas",
+      "organizational_entity": "FCT",
+      "department": "DEEI",
+      "sessions": [
+        {
+          "datetime": "2020-02-20T09:30:00.000Z",
+          "duration": 60,
+          "max_students": 25,
+          "collaborators_required": 1,
+          "collaborators_assigned": 0,
+          "place_specifications": [
+            "inside",
+            "computers"
+          ],
+          "place": null
+        }
+      ]
     }
   },
   {
@@ -34,9 +91,28 @@
     "pk": 4,
     "fields": {
       "name": "Observação microscópica de células",
-      "description": "Observação ao microscópico de células interessantíssimas",
+      "activity_type": "Actividade Laboratorial",
+      "description": "Observação ao microscópio de células interessantíssimas",
       "submission_date": "2018-04-28",
-      "submission_state": "A"
+      "submission_state": "A",
+      "creator": "José Valente Oliveira",
+      "campus": "Gambelas",
+      "organizational_entity": "FCT",
+      "department": "DEEI",
+      "sessions": [
+        {
+          "datetime": "2020-02-20T09:30:00.000Z",
+          "duration": 60,
+          "max_students": 25,
+          "collaborators_required": 1,
+          "collaborators_assigned": 0,
+          "place_specifications": [
+            "inside",
+            "computers"
+          ],
+          "place": null
+        }
+      ]
     }
   },
   {
@@ -44,9 +120,40 @@
     "pk": 5,
     "fields": {
       "name": "Fomos longe demais?",
+      "activity_type": "Tertúlia",
       "description": "O perigoso avanço da inteligência artificial",
       "submission_date": "2018-04-30",
-      "submission_state": "R"
+      "submission_state": "P",
+      "creator": "Marielba",
+      "campus": "Gambelas",
+      "organizational_entity": "FCT",
+      "department": "DEEI",
+      "sessions": [
+        {
+          "datetime": "2020-02-20T09:30:00.000Z",
+          "duration": 60,
+          "max_students": 25,
+          "collaborators_required": 1,
+          "collaborators_assigned": 0,
+          "place_specifications": [
+            "inside",
+            "computers"
+          ],
+          "place": null
+        },
+        {
+          "datetime": "2020-02-20T11:30:00.000Z",
+          "duration": 30,
+          "max_students": 15,
+          "collaborators_required": 0,
+          "collaborators_assigned": 0,
+          "place_specifications": [
+            "inside",
+            "computers"
+          ],
+          "place": null
+        }
+      ]
     }
   }
 ]

@@ -9,8 +9,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "latest",
+    "@fortawesome/free-solid-svg-icons": "latest",
+    "@fortawesome/vue-fontawesome": "latest",
     "buefy": "latest",
     "core-js": "latest",
+    "moment": "latest",
     "vue": "latest",
     "vue-apollo": "latest",
     "vue-router": "latest",

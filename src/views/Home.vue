@@ -13,7 +13,7 @@
           </p>
         </div>
         <div class="column is-4">
-          <img alt="Logo" src="../assets/logo-large.png"/>
+          <img alt="Logo" src="../assets/logo-large.png" />
         </div>
       </div>
     </div>
@@ -27,9 +27,9 @@
           </small>
         </div>
         <div class="column">
-          <img src="../assets/ualg-logo.png"/>
+          <img src="../assets/ualg-logo.png" />
         </div>
-        <div class="column is-1"/>
+        <div class="column is-1" />
       </div>
     </div>
   </div>

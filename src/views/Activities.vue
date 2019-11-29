@@ -1,7 +1,7 @@
 <template>
   <div class="columns">
     <div class="column is-3">
-      <ActivitiesLeftMenu/>
+      <ActivitiesLeftMenu />
     </div>
     <div class="column">
       <nav aria-label="breadcrumbs" class="breadcrumb">
@@ -14,19 +14,19 @@
           </li>
         </ul>
       </nav>
-      <ActivityListFixture/>
+      <ActivityListFixture />
     </div>
   </div>
 </template>
 
 <script>
-  import ActivityListFixture from "../components/fixtures/ActivityList.vue";
-  import ActivitiesLeftMenu from "../components/ActivitiesLeftMenu.vue";
+import ActivityListFixture from "../components/fixtures/ActivityList.vue";
+import ActivitiesLeftMenu from "../components/ActivitiesLeftMenu.vue";
 
-  export default {
-    components: {
-      ActivityListFixture,
-      ActivitiesLeftMenu
-    }
-  };
+export default {
+  components: {
+    ActivityListFixture,
+    ActivitiesLeftMenu
+  }
+};
 </script>

@@ -1,6 +1,9 @@
 import Vue from "vue";
 import VueApollo from "vue-apollo";
-import {createApolloClient, restartWebsockets} from "vue-cli-plugin-apollo/graphql-client";
+import {
+  createApolloClient,
+  restartWebsockets
+} from "vue-cli-plugin-apollo/graphql-client";
 
 // Install the vue plugin
 Vue.use(VueApollo);
@@ -10,7 +13,7 @@ const AUTH_TOKEN = "apollo-token";
 
 // Http endpoint
 const httpEndpoint =
-    process.env.VUE_APP_GRAPHQL_HTTP || "http://localhost:4000/graphql";
+  process.env.VUE_APP_GRAPHQL_HTTP || "http://localhost:4000/graphql";
 
 // Config
 const defaultOptions = {
@@ -19,7 +22,7 @@ const defaultOptions = {
   // You can use `wss` for secure connection (recommended in production)
   // Use `null` to disable subscriptions
   wsEndpoint:
-      null && (process.env.VUE_APP_GRAPHQL_WS || "ws://localhost:4000/graphql"),
+    null && (process.env.VUE_APP_GRAPHQL_WS || "ws://localhost:4000/graphql"),
   // LocalStorage token
   tokenName: AUTH_TOKEN,
   // Enable Automatic Query persisting with Apollo Engine
@@ -51,7 +54,7 @@ const defaultOptions = {
 // Call this in the Vue app file
 export function createProvider(options = {}) {
   // Create apollo client
-  const {apolloClient, wsClient} = createApolloClient({
+  const { apolloClient, wsClient } = createApolloClient({
     ...defaultOptions,
     ...options
   });
@@ -68,9 +71,9 @@ export function createProvider(options = {}) {
     errorHandler(error) {
       // eslint-disable-next-line no-console
       console.log(
-          "%cError",
-          "background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;",
-          error.message
+        "%cError",
+        "background: red; color: white; padding: 2px 4px; border-radius: 3px; font-weight: bold;",
+        error.message
       );
     }
   });
