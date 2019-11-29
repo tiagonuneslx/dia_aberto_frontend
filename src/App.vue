@@ -11,6 +11,20 @@
         </div>
       </div>
     </div>
+    <footer style="background-color: white">
+      <hr style="background-color: black; margin-bottom: 10px" />
+      <div class="columns">
+        <div class="column is-2" style="margin-left: 20px">
+          (c) 2020
+        </div>
+        <div class="column is-8 has-text-centered">
+          Dia Aberto
+        </div>
+        <div class="column is-2" style="margin-left: -20px">
+          Designed by Grupo 9
+        </div>
+      </div>
+    </footer>
   </div>
 </template>
 
