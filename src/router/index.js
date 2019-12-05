@@ -1,47 +1,45 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
-import VueHome from "../views/VueHome.vue";
-import Activities from "../views/Activities.vue";
-import Admin from "../views/Admin.vue";
-import Coordenador from "../views/Coordinator.vue";
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: "/",
-    name: "home",
-    component: Home
+    name: "inicio",
+    component: () => import("../views/Inicio.vue")
   },
   {
-    path: "/vuehome",
-    name: "vuehome",
-    component: VueHome
-  },
-  {
-    path: "/about",
-    name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
+    path: "/atividades",
+    name: "atividades",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue")
+      import(/* webpackChunkName: "atividades" */ "../views/Atividades.vue")
   },
   {
-    path: "/activities",
-    name: "activities",
-    component: Activities
+    path: "/inscricoes",
+    name: "inscricoes",
+    component: () =>
+      import(/* webpackChunkName: "inscricoes" */ "../views/Inscricoes.vue")
   },
   {
-    path: "/coordenador",
-    name: "coordenador",
-    component: Coordenador
+    path: "/transportes",
+    name: "transportes",
+    component: () =>
+      import(/* webpackChunkName: "transportes" */ "../views/Transportes.vue")
   },
   {
-    path: "/admin",
-    name: "admin",
-    component: Admin
+    path: "/almocos",
+    name: "almocos",
+    component: () =>
+      import(/* webpackChunkName: "almocos" */ "../views/Almocos.vue")
+  },
+  {
+    path: "/configuracao",
+    name: "configuracao do dia aberto",
+    component: () =>
+      import(
+        /* webpackChunkName: "almocos" */ "../views/ConfiguracaoDiaAberto.vue"
+      )
   }
 ];
 

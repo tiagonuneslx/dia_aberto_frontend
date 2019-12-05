@@ -1,26 +1,21 @@
 <template>
   <b-navbar>
     <template slot="brand">
-      <b-navbar-item
-        :to="{ path: '/' }"
-        class="logo router-link"
-        style="padding-left: 30px; padding-right: 20px"
-        tag="router-link"
-      >
-        <img alt="Logo" src="../assets/logo.png" />
-        <h1
-          class="has-text-dark"
-          style="padding-left: 6px; letter-spacing: -0.5px;"
-        >
-          <strong>UALG</strong>
-        </h1>
-        <h1
-          class="has-text-primary"
-          style="padding-left: 5px; letter-spacing: -0.5px;"
-        >
-          DIA ABERTO
-        </h1>
+      <b-navbar-item :to="{ name: 'inicio' }" class="logo" tag="router-link">
+        <img alt="Dia Aberto" src="../assets/img/logo-navbar.png" />
       </b-navbar-item>
+    </template>
+    <template slot="start">
+      <template v-for="(separador, index) in separadores[utilizador]">
+        <b-navbar-item
+          :key="index"
+          :to="{ name: separador.nome }"
+          class="is-tab router-link"
+          tag="router-link"
+        >
+          {{ separador.descricao }}
+        </b-navbar-item>
+      </template>
     </template>
     <template slot="end">
       <b-navbar-item tag="a">
@@ -28,7 +23,7 @@
       </b-navbar-item>
       <b-navbar-item tag="div">
         <b-button icon-left="login-variant">
-          Logout
+          Sair
         </b-button>
       </b-navbar-item>
     </template>
@@ -37,18 +32,48 @@
 
 <script>
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  data() {
+    return {
+      separadores: {
+        administrador: [
+          {
+            nome: "atividades",
+            descricao: "Atividades"
+          },
+          {
+            nome: "inscricoes",
+            descricao: "Inscrições"
+          },
+          {
+            nome: "transportes",
+            descricao: "Transportes"
+          },
+          {
+            nome: "almocos",
+            descricao: "Almoços"
+          },
+          {
+            nome: "configuracao do dia aberto",
+            descricao: "Configuração do Dia Aberto"
+          }
+        ]
+      }
+    };
+  },
+  computed: {
+    utilizador() {
+      return this.$store.state.utilizador;
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
 @import "../buefy";
 
-.router-link:focus {
-  outline: none;
-}
-
 .router-link.router-link-exact-active {
+  @extend .navbar-item.is-tab:focus;
   color: $primary;
 }
 </style>

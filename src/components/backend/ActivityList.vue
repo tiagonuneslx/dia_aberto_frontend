@@ -43,7 +43,7 @@ export default {
   },
   apollo: {
     activities: {
-      query: require("../graphql/Activities.gql"),
+      query: require("../../graphql/Activities.gql"),
       update(data) {
         return data.activities.edges.map(activity => {
           return {

@@ -36,11 +36,11 @@
 
 <script>
 export default {
+  props: {
+    activities: []
+  },
   data() {
     return {
-      activities: require("../../fixtures/activities.json").map(
-        model => model.fields
-      ),
       state: {
         A: { description: "Aceite", color: "is-success" },
         P: { description: "Pendente", color: "is-warning" },

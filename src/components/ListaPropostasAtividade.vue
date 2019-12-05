@@ -120,7 +120,7 @@
 <script>
 export default {
   data() {
-    const proposals = require("../../fixtures/activities.json").map(
+    const proposals = require("../fixtures/atividades.json").map(
       model => model.fields
     );
     return {
