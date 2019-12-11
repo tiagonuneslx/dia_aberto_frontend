@@ -5,9 +5,19 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    utilizador: "administrador"
+    utilizador: "coordenador",
+    estadoSubmissao: {
+      A: { descricao: "Aceite", cor: "is-success" },
+      P: { descricao: "Pendente", cor: "is-warning" },
+      R: { descricao: "Rejeitada", cor: "is-danger" }
+    },
+    notificacoes: 0
   },
-  mutations: {},
+  mutations: {
+    mudarUtilizador(state, utilizador) {
+      state.utilizador = utilizador;
+    }
+  },
   actions: {},
   modules: {}
 });

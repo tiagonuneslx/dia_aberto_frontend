@@ -38,8 +38,52 @@ const routes = [
     name: "configuracao do dia aberto",
     component: () =>
       import(
-        /* webpackChunkName: "almocos" */ "../views/ConfiguracaoDiaAberto.vue"
+        /* webpackChunkName: "configuracao" */ "../views/ConfiguracaoDiaAberto.vue"
       )
+  },
+  {
+    path: "/inscricao",
+    name: "inscricao",
+    component: () =>
+      import(/* webpackChunkName: "inscricao" */ "../views/Inscricao.vue")
+  },
+  {
+    path: "/minhasatividades",
+    name: "minhas atividades",
+    component: () =>
+      import(
+        /* webpackChunkName: "minhasatividades" */ "../views/MinhasAtividades.vue"
+      )
+  },
+  {
+    path: "/proporatividade",
+    name: "propor atividade",
+    component: () =>
+      import(
+        /* webpackChunkName: "proporatividade" */ "../views/ProporAtividade.vue"
+      )
+  },
+  {
+    path: "/departamentoatividades",
+    name: "atividades do departamento",
+    component: () =>
+      import(
+        /* webpackChunkName: "departamentoatividades" */ "../views/AtividadesDepartamento.vue"
+      )
+  },
+  {
+    path: "/colaboradores",
+    name: "colaboradores",
+    component: () =>
+      import(
+        /* webpackChunkName: "colaboradores" */ "../views/Colaboradores.vue"
+      )
+  },
+  {
+    path: "/tarefas",
+    name: "tarefas",
+    component: () =>
+      import(/* webpackChunkName: "tarefas" */ "../views/Tarefas.vue")
   }
 ];
 

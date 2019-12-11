@@ -6,7 +6,9 @@
       </b-navbar-item>
     </template>
     <template slot="start">
-      <template v-for="(separador, index) in separadores[utilizador]">
+      <template
+        v-for="(separador, index) in separadores[$store.state.utilizador]"
+      >
         <b-navbar-item
           :key="index"
           :to="{ name: separador.nome }"
@@ -18,11 +20,47 @@
       </template>
     </template>
     <template slot="end">
-      <b-navbar-item tag="a">
-        <b-icon icon="bell" />
-      </b-navbar-item>
       <b-navbar-item tag="div">
-        <b-button icon-left="login-variant">
+        <b-button
+          style="margin-right: 0.9rem"
+          type="is-text"
+          class="has-badge-rounded has-badge-warning"
+          :data-badge="$store.state.notificacoes"
+        >
+          <b-icon icon="bell" />
+        </b-button>
+        <b-dropdown aria-role="list" position="is-bottom-left">
+          <b-button type="is-text" style="margin-right: 0.9rem" slot="trigger">
+            <b-icon icon="account-circle" />
+          </b-button>
+          <b-dropdown-item aria-role="listitem" disabled
+            >Participante Individual</b-dropdown-item
+          >
+          <b-dropdown-item
+            aria-role="listitem"
+            @click="mudarUtilizador('professorSecundario')"
+            >Professor Secundário</b-dropdown-item
+          >
+          <b-dropdown-item aria-role="listitem" disabled
+            >Colaborador</b-dropdown-item
+          >
+          <b-dropdown-item
+            aria-role="listitem"
+            @click="mudarUtilizador('professorUniversitario')"
+            >Professor Universitário</b-dropdown-item
+          >
+          <b-dropdown-item
+            aria-role="listitem"
+            @click="mudarUtilizador('coordenador')"
+            >Coordenador</b-dropdown-item
+          >
+          <b-dropdown-item
+            aria-role="listitem"
+            @click="mudarUtilizador('administrador')"
+            >Administrador</b-dropdown-item
+          >
+        </b-dropdown>
+        <b-button icon-left="logout-variant">
           Sair
         </b-button>
       </b-navbar-item>
@@ -57,13 +95,43 @@ export default {
             nome: "configuracao do dia aberto",
             descricao: "Configuração do Dia Aberto"
           }
+        ],
+        professorSecundario: [
+          {
+            nome: "inscricao",
+            descricao: "Minha Inscrição"
+          }
+        ],
+        professorUniversitario: [
+          {
+            nome: "minhas atividades",
+            descricao: "Minhas Atividades"
+          }
+        ],
+        coordenador: [
+          {
+            nome: "atividades do departamento",
+            descricao: "Atividades do Departamento"
+          },
+          {
+            nome: "inscricoes",
+            descricao: "Inscrições"
+          },
+          {
+            nome: "colaboradores",
+            descricao: "Colaboradores"
+          },
+          {
+            nome: "tarefas",
+            descricao: "Tarefas"
+          }
         ]
       }
     };
   },
-  computed: {
-    utilizador() {
-      return this.$store.state.utilizador;
+  methods: {
+    mudarUtilizador(utilizador) {
+      this.$store.commit("mudarUtilizador", utilizador);
     }
   }
 };

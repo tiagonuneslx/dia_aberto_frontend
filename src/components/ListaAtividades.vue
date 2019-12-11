@@ -3,6 +3,7 @@
     <b-table
       :data="activities"
       default-sort="submission_date"
+      detailed
       hoverable
       paginated
       per-page="10"

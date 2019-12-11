@@ -9,13 +9,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@mdi/font": "^4.6.95",
+    "@mdi/font": "latest",
     "buefy": "latest",
+    "bulma-badge": "latest",
     "core-js": "latest",
     "moment": "latest",
     "vue": "latest",
     "vue-apollo": "latest",
     "vue-router": "latest",
+    "vue-scrollto": "latest",
     "vuex": "latest"
   },
   "devDependencies": {

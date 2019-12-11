@@ -15,7 +15,7 @@
           </b-autocomplete>
         </b-field>
         <b-field>
-          <b-select placeholder="Tipo de Atividade" icon="magnify" expanded>
+          <b-select placeholder="Tipo de Atividade" expanded>
             <option
               v-for="(opcao, index) in tiposAtividade"
               :value="opcao"
@@ -25,13 +25,10 @@
           </b-select>
         </b-field>
         <b-field>
-          <b-select placeholder="Estado" icon="magnify" expanded>
-            <option
-              v-for="(opcao, index) in estadosSubmissao"
-              :value="opcao"
-              :key="index"
-              >{{ $store.state.estadoSubmissao[opcao].descricao }}</option
-            >
+          <b-select placeholder="Campus" expanded>
+            <option v-for="(opcao, index) in campus" :value="opcao" :key="index"
+              >{{ opcao }}
+            </option>
           </b-select>
         </b-field>
         <b-menu-item
@@ -85,6 +82,9 @@
             </b-timepicker>
           </b-field>
         </div>
+        <b-field label="Mínimo de vagas">
+          <b-numberinput v-model="number" controls-position="compact" min="0" />
+        </b-field>
         <b-menu-item
           class="is-not-menu"
           :expanded="maisFiltrosSessao"
@@ -105,15 +105,15 @@
 
 <script>
 export default {
-  name: "AtividadesMenuLateral",
-  props: {
-    atividades: []
-  },
+  name: "SessoesDisponiveisMenuLateral",
   data() {
     return {
       maisFiltrosAtividade: false,
       maisFiltrosSessao: false,
-      nomeAtividade: ""
+      nomeAtividade: "",
+      atividades: require("../../../../fixtures/atividades.json").map(
+        model => model.fields
+      )
     };
   },
   computed: {
@@ -132,6 +132,11 @@ export default {
         ...new Set(this.atividades.map(atividade => atividade.activity_type))
       ].sort();
     },
+    campus() {
+      return [
+        ...new Set(this.atividades.map(atividade => atividade.campus))
+      ].sort();
+    },
     estadosSubmissao() {
       return [
         ...new Set(this.atividades.map(atividade => atividade.submission_state))
@@ -142,6 +147,9 @@ export default {
 </script>
 
 <style lang="scss">
+.label {
+  font-weight: normal;
+}
 .menu-list .is-not-menu a.is-active {
   background-color: white;
   color: black;

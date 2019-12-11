@@ -1,0 +1,64 @@
+[
+  {
+    "model": "colaboradores.colaborador",
+    "pk": 1,
+    "fields": {
+      "codigo": "1",
+      "nome": "João Mateus",
+      "preferencia_departamento": "DEEI",
+      "preferencia_departamento_importancia": "m",
+      "preferencia_tarefa": "percurso",
+      "preferencia_atividade": null,
+      "preferencia_tarefa_importancia": "b",
+      "tarefas": [
+        {
+          "nome": "Acompanhar grupo 4 da atividade \"Introdução a Python\" à atividade \"Fomos longe demais?\"",
+          "inicio": "2020-02-20T10:30:00.000Z",
+          "fim": "2020-02-20T11:00:00.000Z"
+        }
+      ]
+    }
+  },
+  {
+    "model": "colaboradores.colaborador",
+    "pk": 2,
+    "fields": {
+      "codigo": "2",
+      "nome": "Pedro Magalhães",
+      "preferencia_departamento": null,
+      "preferencia_departamento_importancia": null,
+      "preferencia_tarefa": null,
+      "preferencia_atividade": null,
+      "preferencia_tarefa_importancia": null,
+      "tarefas": []
+    }
+  },
+  {
+    "model": "colaboradores.colaborador",
+    "pk": 3,
+    "fields": {
+      "codigo": "3",
+      "nome": "Lucas Faísca",
+      "preferencia_departamento": "DEEI",
+      "preferencia_departamento_importancia": "a",
+      "preferencia_tarefa": "atividade",
+      "preferencia_atividade": "Introdução a Python",
+      "preferencia_tarefa_importancia": "m",
+      "tarefas": []
+    }
+  },
+  {
+    "model": "colaboradores.colaborador",
+    "pk": 4,
+    "fields": {
+      "codigo": "4",
+      "nome": "Nuno Faria",
+      "preferencia_departamento": null,
+      "preferencia_departamento_importancia": null,
+      "preferencia_tarefa": "percurso",
+      "preferencia_atividade": null,
+      "preferencia_tarefa_importancia": "a",
+      "tarefas": []
+    }
+  }
+]

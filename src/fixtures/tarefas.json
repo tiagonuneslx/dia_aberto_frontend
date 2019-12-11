@@ -1,0 +1,30 @@
+[
+  {
+    "model": "colaboradores.tarefa",
+    "pk": 1,
+    "fields": {
+      "codigo": "1",
+      "nome": "Auxiliar na atividade \"Introdução a Python\"",
+      "departamento": "DEEI",
+      "tipo": "atividade",
+      "atividade": "Introdução a Python",
+      "inicio": "2020-02-20T09:30:00.000Z",
+      "fim": "2020-02-20T10:30:00.000Z",
+      "estado": "P"
+    }
+  },
+  {
+    "model": "colaboradores.tarefa",
+    "pk": 2,
+    "fields": {
+      "codigo": "2",
+      "nome": "Acompanhar grupo 4 da atividade \"Introdução a Python\" à atividade \"Fomos longe demais?\"",
+      "departamento": "DEEI",
+      "tipo": "percurso",
+      "atividade": null,
+      "inicio": "2020-02-20T10:30:00.000Z",
+      "fim": "2020-02-20T11:00:00.000Z",
+      "estado": "A"
+    }
+  }
+]

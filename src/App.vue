@@ -38,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 $top-hero-body-height: 45vh;
 $top-hero-body-margin: 8vh;
-$page-lateral-margin: 3rem;
+$page-lateral-margin: 5vw;
 $page-bottom-margin: 5rem;
 
 #app {

@@ -4,6 +4,7 @@
       :data="proposals"
       ref="table"
       hoverable
+      striped
       detailed
       @click="toggleDetails"
       @details-open="closeOtherDetails"
@@ -17,7 +18,7 @@
       aria-current-label="Current page"
     >
       <template slot-scope="props">
-        <b-table-column field="name" label="Nome" sortable width="300">
+        <b-table-column field="name" label="Nome" sortable>
           {{ props.row.name }}
         </b-table-column>
         <b-table-column
@@ -37,14 +38,8 @@
             {{ state[props.row.submission_state].description }}
           </span>
         </b-table-column>
-        <b-table-column field="creator" label="Criador" sortable width="200">
+        <b-table-column field="creator" label="Criador" sortable>
           {{ props.row.creator }}
-        </b-table-column>
-        <b-table-column label="Ações">
-          <template v-if="props.row.submission_state === 'P'">
-            <b-icon icon="check" type="is-success" />
-            <b-icon icon="close" type="is-danger" />
-          </template>
         </b-table-column>
       </template>
       <template slot="detail" slot-scope="props">
@@ -80,7 +75,7 @@
                   {{ moment(session_props.row.datetime).format("hh:mm") }}
                 </b-table-column>
                 <b-table-column field="duration" label="Duração">
-                  {{ session_props.row.duration }}
+                  {{ session_props.row.duration }} min
                 </b-table-column>
                 <b-table-column
                   field="max_students"
@@ -107,9 +102,23 @@
               type="is-success"
               style="margin-right: 10px"
               icon-left="check"
+              @click="confirm"
               >Aceitar</b-button
             >
-            <b-button type="is-danger" icon-left="delete">Rejeitar</b-button>
+            <b-button
+              type="is-danger"
+              icon-left="delete"
+              @click="confirmCustomDelete"
+              >Rejeitar</b-button
+            >
+          </div>
+          <div v-else style="margin-top: 13px">
+            <b-button
+              type="is-primary"
+              style="margin-right: 10px"
+              icon-left="pencil"
+              >Propor alteração</b-button
+            >
           </div>
         </div>
       </template>
@@ -119,8 +128,9 @@
 
 <script>
 export default {
+  name: "AtividadesDepartamentoTabela",
   data() {
-    const proposals = require("../fixtures/atividades.json").map(
+    const proposals = require("../../fixtures/atividades.json").map(
       model => model.fields
     );
     return {
@@ -142,6 +152,41 @@ export default {
         row !== proposal && this.$refs.table.closeDetailRow(proposal);
       });
       this.$refs.table.openDetailRow(row);
+    },
+    confirm() {
+      this.$buefy.dialog.confirm({
+        message:
+          "Tem a certeza que deseja aceitar o pedido de criação da atividade?",
+        cancelText: "Cancelar",
+        confirmText: "Confirmar",
+        type: "is-success",
+        onConfirm: () => this.$buefy.toast.open("Atividade aceite!")
+      });
+    },
+    confirmCustomDelete() {
+      this.$buefy.dialog.confirm({
+        title: "Rejeitar Atividade",
+        message:
+          "Tem a certeza que deseja <b>Rejeitar</b> a ativdade? Esta ação não pode ser revertida!",
+        cancelText: "Cancelar",
+        confirmText: "Rejeitar",
+        type: "is-danger",
+        hasIcon: true,
+        onConfirm: () => this.prompt()
+      });
+    },
+    prompt() {
+      this.$buefy.dialog.prompt({
+        message: `<p>Por favor, indique a razão pela qual rejeitou a atividade.</p>
+                  <small>Esta será enviada para o professor que a propôs.</small>`,
+        inputAttrs: {
+          placeholder: "Indique o motivo..."
+        },
+        trapFocus: true,
+        cancelText: "Cancelar",
+        confirmText: "Enviar",
+        onConfirm: value => this.$buefy.toast.open("Atividade rejeitada!")
+      });
     }
   }
 };
