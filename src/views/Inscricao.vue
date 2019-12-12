@@ -44,6 +44,15 @@
                 >
                   Anterior
                 </b-button>
+                <b-button
+                  v-else
+                  tag="router-link"
+                  :to="{ name: 'inicio' }"
+                  outlined
+                  v-scroll-to="'#top'"
+                >
+                  Cancelar
+                </b-button>
               </div>
               <div class="level-right">
                 <b-button
@@ -59,12 +68,10 @@
                 </b-button>
                 <b-button
                   v-else
-                  tag="router-link"
-                  to="/"
                   outlined
                   size="is-large"
                   type="is-success"
-                  @click.prevent
+                  @click.prevent="submeter"
                 >
                   Submeter Inscrição
                 </b-button>
@@ -93,6 +100,30 @@ export default {
     Transporte,
     Escola,
     Responsaveis
+  },
+  data() {
+    return {
+      campos: []
+    };
+  },
+  methods: {
+    submeter() {
+      this.$buefy.dialog.confirm({
+        message: "Tem a certeza que submeter a inscrição no Dia Aberto?",
+        cancelText: "Cancelar",
+        confirmText: "Confirmar",
+        type: "is-success",
+        onConfirm: () => this.confirmado()
+      });
+    },
+    confirmado() {
+      this.$buefy.toast.open("Inscrição concluída!");
+      this.$store.commit(
+        "adicionarNotificacao",
+        "A sua inscrição foi concluída com sucesso!"
+      );
+      this.$router.push({ name: "inicio" });
+    }
   }
 };
 </script>

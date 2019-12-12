@@ -1,0 +1,58 @@
+[
+  {
+    "model": "transportes.transporte",
+    "pk": 1,
+    "fields": {
+      "hora_partida": "2020-02-20T06:00:00.000Z",
+      "hora_chegada": "2020-02-20T09:00:00.000Z",
+      "escola": "Escola Secundária Henriques Nogueira",
+      "localidade": "Torres Vedras",
+      "campus": "Gambelas",
+      "numero_autocarros": 1,
+      "numero_participantes": 50,
+      "estado": "Por publicar"
+    }
+  },
+  {
+    "model": "transportes.transporte",
+    "pk": 2,
+    "fields": {
+      "hora_partida": "2020-02-20T08:00:00.000Z",
+      "hora_chegada": "2020-02-20T09:00:00.000Z",
+      "escola": "Escola Secundária José Bernardino",
+      "localidade": "Vilar",
+      "campus": "Gambelas",
+      "numero_autocarros": 2,
+      "numero_participantes": 120,
+      "estado": "Por publicar"
+    }
+  },
+  {
+    "model": "transportes.transporte",
+    "pk": 3,
+    "fields": {
+      "hora_partida": "2020-02-20T08:30:00.000Z",
+      "hora_chegada": "2020-02-20T09:30:00.000Z",
+      "escola": "Escola Secundária Filipe de Souza",
+      "localidade": "Tavira",
+      "campus": "Penha",
+      "numero_autocarros": 2,
+      "numero_participantes": 100,
+      "estado": "Publicado"
+    }
+  },
+  {
+    "model": "transportes.transporte",
+    "pk": 4,
+    "fields": {
+      "hora_partida": "2020-02-20T10:10:00.000Z",
+      "hora_chegada": "2020-02-20T11:00:00.000Z",
+      "escola": "Escola Secundária de Loulé",
+      "localidade": "Loulé",
+      "campus": "Gambelas",
+      "numero_autocarros": 1,
+      "numero_participantes": 60,
+      "estado": "Publicado"
+    }
+  }
+]

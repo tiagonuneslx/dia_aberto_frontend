@@ -28,6 +28,14 @@ const routes = [
       import(/* webpackChunkName: "transportes" */ "../views/Transportes.vue")
   },
   {
+    path: "/adicionartransporte",
+    name: "adicionar transporte",
+    component: () =>
+      import(
+        /* webpackChunkName: "transportes" */ "../views/AdicionarTransporte.vue"
+      )
+  },
+  {
     path: "/almocos",
     name: "almocos",
     component: () =>
@@ -84,6 +92,12 @@ const routes = [
     name: "tarefas",
     component: () =>
       import(/* webpackChunkName: "tarefas" */ "../views/Tarefas.vue")
+  },
+  {
+    path: "/adicionartarefa",
+    name: "adicionar tarefa",
+    component: () =>
+      import(/* webpackChunkName: "tarefas" */ "../views/AdicionarTarefa.vue")
   }
 ];
 

@@ -21,14 +21,49 @@
     </template>
     <template slot="end">
       <b-navbar-item tag="div">
-        <b-button
-          style="margin-right: 0.9rem"
-          type="is-text"
-          class="has-badge-rounded has-badge-warning"
-          :data-badge="$store.state.notificacoes"
+        <b-dropdown
+          v-model="navigation"
+          position="is-bottom-left"
+          aria-role="menu"
         >
-          <b-icon icon="bell" />
-        </b-button>
+          <span slot="trigger" role="button">
+            <b-button
+              style="margin-right: 0.9rem"
+              type="is-text"
+              class="has-badge-rounded has-badge-warning"
+              :data-badge="$store.state.notificacoes.length"
+            >
+              <b-icon icon="bell" />
+            </b-button>
+          </span>
+
+          <b-dropdown-item custom aria-role="menuitem">
+            <strong>Notificações</strong>
+          </b-dropdown-item>
+          <hr class="dropdown-divider" />
+          <div
+            v-for="(notificacao, index) in $store.state.notificacoes"
+            :key="index"
+          >
+            <b-dropdown-item has-link aria-role="menuitem">
+              <a style="width: 18rem; white-space: initial;">
+                {{ notificacao }}
+              </a>
+            </b-dropdown-item>
+            <b-dropdown-item separator />
+          </div>
+          <div v-if="$store.state.notificacoes.length === 0">
+            <b-dropdown-item custom>
+              <div class="has-text-grey">
+                Não tem novas notificações!
+              </div>
+            </b-dropdown-item>
+            <b-dropdown-item separator />
+          </div>
+          <b-dropdown-item>
+            <u>Ver todas as notificações</u>
+          </b-dropdown-item>
+        </b-dropdown>
         <b-dropdown aria-role="list" position="is-bottom-left">
           <b-button type="is-text" style="margin-right: 0.9rem" slot="trigger">
             <b-icon icon="account-circle" />

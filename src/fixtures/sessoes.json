@@ -1,0 +1,155 @@
+[
+  {
+    "model": "activities.sessao",
+    "pk": 1,
+    "fields": {
+      "id": 1,
+      "campus": "Gambelas",
+      "atividade": "Introdução a Python",
+      "datetime": "2020-02-20T09:30:00.000Z",
+      "duration": 60,
+      "max_students": 25,
+      "vagas": 25,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["inside", "computers"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 2,
+    "fields": {
+      "id": 2,
+      "campus": "Penha",
+      "atividade": "O primeiro Hello World",
+      "datetime": "2020-02-20T09:30:00.000Z",
+      "duration": 60,
+      "max_students": 25,
+      "vagas": 25,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["inside", "computers"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 3,
+    "fields": {
+      "id": 3,
+      "campus": "Penha",
+      "atividade": "Deixa-me rir",
+      "datetime": "2020-02-20T09:30:00.000Z",
+      "duration": 60,
+      "max_students": 25,
+      "vagas": 25,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["inside", "computers"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 4,
+    "fields": {
+      "id": 4,
+      "campus": "Penha",
+      "atividade": "Observação microscópica",
+      "datetime": "2020-02-20T09:30:00.000Z",
+      "duration": 60,
+      "max_students": 25,
+      "vagas": 25,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["inside", "computers"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 5,
+    "fields": {
+      "id": 5,
+      "campus": "Gambelas",
+      "atividade": "Fomos longe demais?",
+      "datetime": "2020-02-20T09:30:00.000Z",
+      "duration": 60,
+      "max_students": 25,
+      "vagas": 25,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["Sala", "Computadores"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 6,
+    "fields": {
+      "id": 6,
+      "campus": "Gambelas",
+      "datetime": "2020-02-20T11:30:00.000Z",
+      "atividade": "Fomos longe demais?",
+      "duration": 30,
+      "max_students": 15,
+      "vagas": 15,
+      "collaborators_required": 0,
+      "collaborators_assigned": 0,
+      "place_specifications": ["Sala"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 7,
+    "fields": {
+      "id": 7,
+      "campus": "Gambelas",
+      "atividade": "Ciência no mundo",
+      "datetime": "2020-02-20T10:00:00.000Z",
+      "duration": 60,
+      "max_students": 30,
+      "vagas": 30,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["Sala", "Computadores"],
+      "place": "CP Anf. C"
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 8,
+    "fields": {
+      "id": 8,
+      "campus": "Gambelas",
+      "atividade": "Ciência no mundo",
+      "datetime": "2020-02-20T14:00:00.000Z",
+      "duration": 90,
+      "max_students": 50,
+      "vagas": 40,
+      "collaborators_required": 0,
+      "collaborators_assigned": 0,
+      "place_specifications": ["Sala"],
+      "place": null
+    }
+  },
+  {
+    "model": "activities.sessao",
+    "pk": 9,
+    "fields": {
+      "id": 9,
+      "campus": "Gambelas",
+      "atividade": "Física no Dia a Dia",
+      "datetime": "2020-02-20T14:00:00.000Z",
+      "duration": 60,
+      "max_students": 40,
+      "vagas": 35,
+      "collaborators_required": 1,
+      "collaborators_assigned": 0,
+      "place_specifications": ["Sala", "Laboratório"],
+      "place": "Ed.2 Sala 2.12"
+    }
+  }
+]

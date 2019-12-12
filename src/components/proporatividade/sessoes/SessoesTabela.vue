@@ -39,7 +39,7 @@
           </ul>
         </b-table-column>
         <b-table-column label="Ações" centered>
-          <b-icon icon="close-box" type="is-danger" />
+          <a><b-icon icon="close-box" type="is-danger"/></a>
         </b-table-column>
       </template>
     </b-table>

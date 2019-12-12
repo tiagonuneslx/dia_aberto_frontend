@@ -72,6 +72,10 @@
                 <b-field>
                   <b-select placeholder="Tarefa a atribuir..." expanded>
                     <option
+                      >09:00 - 10:00: Auxiliar na atividade "Observação
+                      Microscópica"</option
+                    >
+                    <option
                       >09:30 - 10:30: Auxiliar na atividade "Introdução a
                       Python"</option
                     >

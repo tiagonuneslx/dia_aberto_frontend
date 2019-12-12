@@ -42,7 +42,7 @@
             <b-table :data="props.row.sessions">
               <template slot-scope="session_props">
                 <b-table-column field="datetime" label="Hora">
-                  {{ moment(session_props.row.datetime).format("hh:mm") }}
+                  {{ moment(session_props.row.datetime).format("HH:mm") }}
                 </b-table-column>
                 <b-table-column field="duration" label="Duração">
                   {{ session_props.row.duration }} min
@@ -64,7 +64,13 @@
                       style="width: 7rem; margin-bottom: 0"
                       controls-position="compact"
                       min="0"
-                      v-model="n[session_props.row.id]"
+                      v-model="inscritos[session_props.row.id]"
+                      @change="
+                        mudarInscritos(
+                          session_props.row.id,
+                          inscritos[session_props.row.id]
+                        )
+                      "
                     />
                   </b-field>
                 </b-table-column>
@@ -92,7 +98,7 @@ export default {
         P: { description: "Pendente", color: "is-warning" },
         R: { description: "Rejeitada", color: "is-danger" }
       },
-      n: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+      inscritos: this.$store.state.inscritos
     };
   },
   methods: {
@@ -104,6 +110,9 @@ export default {
         row !== proposal && this.$refs.table.closeDetailRow(proposal);
       });
       this.$refs.table.openDetailRow(row);
+    },
+    mudarInscritos(id, inscritos) {
+      this.$store.commit("mudarInscritos", id, inscritos);
     }
   }
 };

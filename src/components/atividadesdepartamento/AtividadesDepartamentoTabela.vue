@@ -160,7 +160,13 @@ export default {
         cancelText: "Cancelar",
         confirmText: "Confirmar",
         type: "is-success",
-        onConfirm: () => this.$buefy.toast.open("Atividade aceite!")
+        onConfirm: () => {
+          this.$buefy.toast.open("Atividade aceite!");
+          this.$store.commit(
+            "adicionarNotificacao",
+            "A proposta de atividade foi aceite com sucesso!"
+          );
+        }
       });
     },
     confirmCustomDelete() {
@@ -185,7 +191,13 @@ export default {
         trapFocus: true,
         cancelText: "Cancelar",
         confirmText: "Enviar",
-        onConfirm: value => this.$buefy.toast.open("Atividade rejeitada!")
+        onConfirm: value => {
+          this.$buefy.toast.open("Atividade rejeitada!");
+          this.$store.commit(
+            "adicionarNotificacao",
+            "A proposta de atividade foi rejeitada com sucesso!"
+          );
+        }
       });
     }
   }

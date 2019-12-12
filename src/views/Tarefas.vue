@@ -16,6 +16,8 @@
       </nav>
       <b-button
         icon-left="plus"
+        tag="router-link"
+        :to="{ name: 'adicionar tarefa' }"
         style="margin-bottom: 1rem; margin-right: 20px"
         type="is-success"
         outlined

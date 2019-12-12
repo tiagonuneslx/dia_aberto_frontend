@@ -76,7 +76,7 @@
       </div>
     </div>
     <div class="has-text-centered" style="margin-top: 2rem">
-      <b-button style="margin-right: 1rem" icon-left="close">Limpar</b-button>
+      <b-button style="margin-right: 1rem">Limpar</b-button>
       <b-button type="is-success" icon-left="plus">Adicionar Sessão</b-button>
     </div>
   </div>

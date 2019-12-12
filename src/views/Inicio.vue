@@ -23,8 +23,8 @@
           <div class="column is-8">
             <p>2019 Dia Aberto por <a>Grupo 9</a></p>
             <small>
-              O código fonte estará aberto sobre a licença
-              <a href="https://opensource.org/licenses/mit-license.php">MIT</a>
+              Contacto de suporte:
+              <a href="">suporte.dia.aberto@ualg.pt</a>
             </small>
           </div>
           <div class="column">

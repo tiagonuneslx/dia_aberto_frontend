@@ -7,12 +7,12 @@
     <div class="columns">
       <div class="column">
         <b-field label="Nome da escola">
-          <b-input v-model="nomeEscola" />
+          <b-input v-model="nomeEscola" type="text" required />
         </b-field>
       </div>
       <div class="column">
         <b-field label="Localidade">
-          <b-input v-model="localidadeEscola" />
+          <b-input v-model="localidadeEscola" type="text" required />
         </b-field>
       </div>
     </div>
@@ -23,12 +23,12 @@
     <div class="columns">
       <div class="column">
         <b-field label="Ano">
-          <b-input v-model="anoEscola" />
+          <b-input v-model="anoEscola" type="number" required />
         </b-field>
       </div>
       <div class="column">
         <b-field label="Turma">
-          <b-input v-model="turmaEscola" />
+          <b-input v-model="turmaEscola" type="text" required />
         </b-field>
       </div>
       <div class="column">
@@ -38,7 +38,7 @@
       </div>
     </div>
     <b-field label="Área científica">
-      <b-input v-model="areaCientifica" />
+      <b-input v-model="areaCientifica" type="text" required />
     </b-field>
     <hr />
   </div>
@@ -49,5 +49,3 @@ export default {
   name: "Escola"
 };
 </script>
-
-<style scoped></style>

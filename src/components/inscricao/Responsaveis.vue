@@ -7,17 +7,17 @@
     <div class="columns">
       <div class="column">
         <b-field label="Nome">
-          <b-input v-model="nome" />
+          <b-input v-model="nome" type="text" required />
         </b-field>
       </div>
       <div class="column">
         <b-field label="E-mail">
-          <b-input v-model="email" />
+          <b-input v-model="email" type="email" required />
         </b-field>
       </div>
       <div class="column">
         <b-field label="Telemóvel/Telefone">
-          <b-input v-model="telemovel" />
+          <b-input v-model="telemovel" type="tel" required />
         </b-field>
       </div>
     </div>

@@ -1,7 +1,23 @@
 <template>
   <div>
     <b-table
-      :data="tarefas"
+      :data="
+        !$store.state.tarefa ||
+        tarefas.filter(
+          t =>
+            t.nome ===
+            'Levar participantes desde o Edifício 8 até a sessão da atividade Observação Microscópica'
+        ).length > 0
+          ? tarefas
+          : tarefas.unshift({
+              nome:
+                'Levar participantes desde o Edifício 8 até a sessão da atividade Observação Microscópica',
+              inicio: '2020-02-20T09:00:00.000Z',
+              fim: '2020-02-20T10:00:00.000Z',
+              estado: 'P',
+              tipo: 'Percurso'
+            })
+      "
       ref="table"
       @click="toggleDetails"
       @details-open="closeOtherDetails"
@@ -54,7 +70,7 @@
                       <option>João Mateus</option>
                       <option>Pedro Magalhães</option>
                       <option>Lucas Faísca</option>
-                      <option>Nuno Faria</option>
+                      <option>Nuno Silva</option>
                     </b-select>
                   </b-field>
                 </div>

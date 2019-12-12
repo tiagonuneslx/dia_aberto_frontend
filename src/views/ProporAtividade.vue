@@ -26,8 +26,8 @@
           <ProporAtividadeSessoes />
         </b-step-item>
         <b-step-item label="Submissão" icon="check">
-          <SubmissaoAtividade
-        /></b-step-item>
+          <SubmissaoAtividade />
+        </b-step-item>
 
         <template slot="navigation" slot-scope="{ previous, next }">
           <div class="column is-8 is-offset-2">
@@ -41,6 +41,15 @@
                   v-scroll-to="'#top'"
                 >
                   Anterior
+                </b-button>
+                <b-button
+                  v-else
+                  tag="router-link"
+                  :to="{ name: 'minhas atividades' }"
+                  outlined
+                  v-scroll-to="'#top'"
+                >
+                  Cancelar
                 </b-button>
               </div>
               <div class="level-right">
@@ -87,7 +96,8 @@ export default {
   methods: {
     submeter() {
       this.$buefy.dialog.confirm({
-        message: "Tem a certeza que sumeter a proposta de criação da atividade?",
+        message:
+          "Tem a certeza que submeter a proposta de criação da atividade?",
         cancelText: "Cancelar",
         confirmText: "Confirmar",
         type: "is-success",
@@ -96,7 +106,11 @@ export default {
     },
     confirmado() {
       this.$buefy.toast.open("Atividade proposta!");
-      this.$router.push({ name: "minhasatividades" });
+      this.$store.commit(
+        "adicionarNotificacao",
+        "A atividade foi proposta com sucesso!"
+      );
+      this.$router.push({ name: "minhas atividades" });
     }
   }
 };
