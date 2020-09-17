@@ -23,6 +23,14 @@ in the root of the project.
 npm install
 ```
 
+### Usage
+
+To run the server in localhost, run this command in the root of the project.
+
+```
+npm serve
+```
+
 ### Dependencies overview
 
 - **Node.js**: JavaScript runtime designed to build scalable network applications
