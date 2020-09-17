@@ -1,6 +1,6 @@
-# Dia Aberto Frontend
+# Dia Aberto high fidelity prototype
 
-Frontend server for Computer Science project "Dia Aberto", using the Javascript
+High fidelity prototype for Computer Science project "Dia Aberto", using the Javascript
 frontend web framework "Vue.js".
 
 ### Main Prerequisites
@@ -22,13 +22,6 @@ in the root of the project.
 ```
 npm install
 ```
-
-### Editors Plugins
-
-##### WebStorm
-
-- [JS GraphQL](https://plugins.jetbrains.com/plugin/8097-js-graphql/)
-- [.env files support](https://plugins.jetbrains.com/plugin/9525--env-files-support/)
 
 ### Dependencies overview
 
@@ -55,12 +48,9 @@ npm install
 - **Node-sass**: Provides binding for Node.js to the Stylesheet compiler
 - **Buefy**: Bulma's Vue.js components
 
-## Authors
+## Author
 
 - Tiago Nunes - [_tiagonuneslx_](https://github.com/tiagonuneslx)
-
-See also the list of [contributors](https://github.com/[project_url]/contributors) who
-participated in this project.
 
 ## License
 
