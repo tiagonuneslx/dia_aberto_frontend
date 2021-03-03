@@ -28,7 +28,7 @@ npm install
 To run the server in localhost, run this command in the root of the project.
 
 ```
-npm serve
+npm run serve
 ```
 
 ### Dependencies overview
