@@ -3,6 +3,14 @@
 High fidelity prototype for Computer Science project "Dia Aberto", using the Javascript
 frontend web framework "Vue.js".
 
+### UPDATE
+
+Dependencies' versions are now fixed (instead of set to "latest", which created problems)
+
+Also, for your convenience the project is now **live** at: https://tiagonuneslx.github.io/dia_aberto_frontend/
+
+Please consider staring the project and maybe following me on Github/LinkedIn (https://www.linkedin.com/in/tiago-nunes-8430401b7) :raised_hands: Cheers :beers:
+
 ### Main Prerequisites
 
 - [Git](https://git-scm.com/)
@@ -13,7 +21,7 @@ frontend web framework "Vue.js".
 First, clone the project from GitHub using Git.
 
 ```
-git clone [github project url]
+git clone https://github.com/tiagonuneslx/dia_aberto_frontend.git
 ```
 
 All project dependencies can be installed running this command in the command line
